@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myappbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="5dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/left_action_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="?android:selectableItemBackground"
+                android:gravity="center_vertical"
+                android:src="@drawable/ic_keyboard_arrow_left_white_24dp"
+                android:textSize="@dimen/text_18" />
+
+            <ImageView
+                android:id="@+id/profileimg"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_toRightOf="@id/left_action_bar"
+                android:src="@android:drawable/gallery_thumb" />
+
+            <LinearLayout
+                android:id="@+id/ll_name_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_2"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_toEndOf="@+id/profileimg"
+                android:layout_toRightOf="@+id/profileimg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/action_bar_title"
+                    fontPath="fonts/Roboto-Regular.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:textStyle="bold"
+                    android:text="@string/app_name"
+                    android:textSize="@dimen/text_18"
+                    tools:ignore="MissingPrefix" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/math" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:id="@+id/video_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/call_icon"
+                android:gravity="center_vertical"
+                android:paddingRight="@dimen/padding_5"
+                android:src="@drawable/ic_call_white_24dp" />
+
+            <ImageView
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:id="@+id/call_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_toLeftOf="@+id/text"
+                android:gravity="center_vertical"
+                android:paddingRight="@dimen/padding_5"
+                android:src="@drawable/ic_videocam_white_24dp" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_10"
+                android:background="@drawable/border"
+                android:textStyle="bold"
+                android:text="@string/end" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@android:color/white"
+        app:tabMode="fixed" />
+</android.support.design.widget.AppBarLayout>
